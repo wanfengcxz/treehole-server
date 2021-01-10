@@ -74,4 +74,9 @@
         SELECT * FROM message
     </select>
 
+    <update id="updateTotalLike" parameterType="int">
+        UPDATE Message SET total_likes = total_likes+1
+        WHERE id=#{message_id}
+    </update>
+
 </mapper>

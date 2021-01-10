@@ -26,8 +26,10 @@ create table `Message`(
 );
 
 -- 测试
-insert into `Message` values(0,2,'Amazing','aaa.jpg','我今天很开心',0,1234567891);
+insert into `Message` values(0,3,'Amazing','bbbba.jpg','我今天很开心1231231',0,1234567891);
 
 select * from `Message`;
 
 select * from `Message`;
+
+delete from `Message` where user_id=3;

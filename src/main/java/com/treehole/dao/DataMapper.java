@@ -34,6 +34,7 @@ public interface DataMapper {
 
     int deleteOneMessage(Message message);
 
+    int updateTotalLike(int message_id);
 
 //    // 用户登录
 //    User login(String phone, String password);

@@ -145,7 +145,7 @@ public class DataController {
 
     // 4.我的树洞
     @PostMapping("/getMyAllMessage")
-    public Result getMyAllMessage(@RequestParam("id") String user_id,
+    public Result getMyAllMessage(@RequestParam("user_id") String user_id,
                                   @RequestParam("encrypt_code") String encrypt_code) {
         try {
             // 验证用户
@@ -221,7 +221,68 @@ public class DataController {
         }
     }
 
+    // 6.树洞广场
+    @PostMapping("/getAllMessage")
+    public Result getAllMessage(@RequestParam("user_id") String user_id,
+                                  @RequestParam("encrypt_code") String encrypt_code) {
+        try {
+            // 验证用户
+            String id_decrypt = AESUtil.decode(encrypt_code);
+            // 合法
+            if (user_id.equals(id_decrypt)) {
 
+                Message message = new Message();
+                List<Message> messageList = dataMapper.getMessageByConditionIf(message);
+
+                return ResultUtil.success(messageList);
+            }
+            // 不合法
+            else {
+                return ResultUtil.illegalAccess();
+            }
+        }
+        catch (BadPaddingException e){
+            // 解密失败
+            return ResultUtil.illegalAccess();
+        }
+    }
+
+    // 7.点赞
+    @PostMapping("/like")
+    public Result like(@RequestParam("user_id") String user_id,
+                       @RequestParam("encrypt_code") String encrypt_code,
+                       @RequestParam("message_id") String message_id
+                       ) {
+        try {
+            // 验证用户
+            String id_decrypt = AESUtil.decode(encrypt_code);
+            // 合法
+            if (user_id.equals(id_decrypt)) {
+
+                // message_id
+                int int_id = Integer.valueOf(message_id).intValue();
+
+                int res_code =  dataMapper.updateTotalLike(int_id);
+
+                if (res_code == 1){
+
+                    return ResultUtil.success();
+                }
+                else {
+                    return ResultUtil.unkonwnError();
+                }
+            }
+            // 不合法
+            else {
+                return ResultUtil.illegalAccess();
+            }
+
+        }
+        catch (BadPaddingException e){
+                // 解密失败
+                return ResultUtil.illegalAccess();
+            }
+        }
     // http://localhost:port/getAllMessage?password=
     @RequestMapping("/getAllMessage")
     public Result getAllMessage(String password){
