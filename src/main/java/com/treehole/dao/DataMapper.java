@@ -16,11 +16,6 @@ import java.util.List;
 @Mapper
 public interface DataMapper {
 
-    // test
-    User getUserbyName(String name);
-
-    // 根据
-    User selectUserById(int id);
 
     List<User> getUserByConditionIf(User user);
 

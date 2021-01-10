@@ -6,9 +6,6 @@
 <!--    <resultMap id="message" type="com.treehole.entity.Message"/>-->
 <!--    <parameterMap id="message" type="com.treehole.entity.Message"/>-->
 
-    <select id="getUserbyName" resultType="User" parameterType="String">
-        SELECT * FROM user Where user_name=#{1}
-    </select>
 
     <select id="selectUserByPhone" parameterType="String" resultType="User">
         SELECT * FROM User
@@ -73,30 +70,6 @@
         </where>
     </delete>
 
-
-
-
-
-
-
-<!--    <update id="updateUserByUsername" parameterMap="user">-->
-<!--        UPDATE user SET USER_PASSWORD=#{user_password} WHERE USER_NAME=#{user_name}-->
-<!--    </update>-->
-
-<!--    <delete id="deleteUserByUsername" parameterType="String">-->
-<!--        DELETE FROM user WHERE USER_NAME=#{1}-->
-<!--    </delete>-->
-
-<!--    &lt;!&ndash; 使用alias自定义的parameterType&ndash;&gt;-->
-<!--    <insert id="saveUser" parameterType="user">-->
-<!--        INSERT INTO user (user_password,user_name) VALUES (#{user_password},#{user_name})-->
-<!--    </insert>-->
-
-<!--    <select id="getUserList" resultMap="user">-->
-<!--        SELECT  * FROM user-->
-<!--    </select>-->
-
-<!--    <resultMap id="message" type="com.treehole.entity.Message"/>-->
     <select id="getAllMessage" resultType="Message" parameterType="String">
         SELECT * FROM message
     </select>

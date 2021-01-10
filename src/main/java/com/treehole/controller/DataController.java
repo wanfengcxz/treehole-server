@@ -46,9 +46,11 @@ public class DataController {
         // 由于数据库设置了约束：手机号字段唯一，则查询时最多获得一条数据
 
         // 首先在User表中查询该手机号有没有被注册过
-        User user = dataMapper.selectUserByPhone(phone);
+        User user = new User();
+        user.setPhone(phone);
+        List<User> user_list_res = dataMapper.getUserByConditionIf(user);
         // 如果查询出记录，则该手机号已被注册过
-        if (user != null){
+        if (user_list_res.size() != 0){
             return ResultUtil.phoneRepeatition();
         }
         // 如果查询不出记录，则该手机号未被注册
@@ -71,23 +73,26 @@ public class DataController {
     @PostMapping("/login")
     public Result login(@RequestParam("phone") String phone,
                         @RequestParam("password") String password){
-        User user1 = dataMapper.selectUserByPhone(phone);
+        User find_condition = new User();
+        find_condition.setPhone(phone);
+        List<User> user_list_res = dataMapper.getUserByConditionIf(find_condition);
         // 如果查询为空，则该手机号没有注册帐号
-        if (user1 == null){
+        if (user_list_res.size() == 0){
             return ResultUtil.userNotExist();
         }
         // 当前手机号注册有帐号
         else {
             // 根据手机号和密码在数据库中查询
-            User user2 = dataMapper.selectUserByPhonePassword(phone,password);
+            find_condition.setPassword(password);
+            user_list_res = dataMapper.getUserByConditionIf(find_condition);
             // 如果查询结果为空，则密码错误
-            if (user2 == null){
+            if (user_list_res.size() == 0){
                 return ResultUtil.passwordError();
             }
             // 已注册，可以登录
             else {
-                user2.setPassword(AESUtil.encode(String.valueOf(user2.getId())));
-                return ResultUtil.success(user2);
+                user_list_res.get(0).setPassword(AESUtil.encode(String.valueOf(user_list_res.get(0).getId())));
+                return ResultUtil.success(user_list_res.get(0));
             }
         }
     }
@@ -214,11 +219,6 @@ public class DataController {
             // 解密失败
             return ResultUtil.illegalAccess();
         }
-    }
-
-    @RequestMapping("getUserbyName")
-    public Result getUserbyName(String name){
-        return ResultUtil.success(dataMapper.getUserbyName(name));
     }
 
 
