@@ -283,9 +283,5 @@ public class DataController {
                 return ResultUtil.illegalAccess();
             }
         }
-    // http://localhost:port/getAllMessage?password=
-    @RequestMapping("/getAllMessage")
-    public Result getAllMessage(String password){
-        return ResultUtil.success(dataMapper.getAllMessage());
-    }
+
 }

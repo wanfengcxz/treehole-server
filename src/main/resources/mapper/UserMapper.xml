@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.treehole.dao.DataMapper">
-<!--    <resultMap id="user" type="com.treehole.entity.User"/>-->
-<!--    <parameterMap id="user" type="com.treehole.entity.User"/>-->
-<!--    <resultMap id="message" type="com.treehole.entity.Message"/>-->
-<!--    <parameterMap id="message" type="com.treehole.entity.Message"/>-->
-
 
     <select id="selectUserByPhone" parameterType="String" resultType="User">
         SELECT * FROM User

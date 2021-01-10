@@ -36,26 +36,4 @@ public interface DataMapper {
 
     int updateTotalLike(int message_id);
 
-//    // 用户登录
-//    User login(String phone, String password);
-//
-    // 获取所有树洞消息
-    List<Message> getAllMessage();
-//
-//    // 发布树洞
-//    void publicMessage();
-//
-//    // 获取我的所有树洞
-//    List<Message> getMyAllMessage(String password);
-//
-//    // 删除树洞
-//    void deleteMessage(int id, int user_id);
-//
-//    // 点赞
-//    void like(int id, int user_id);
-//
-//    // 是否存在当前用户
-//    User isExist(String password);
-
-
 }
