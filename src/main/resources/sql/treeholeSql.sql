@@ -8,8 +8,8 @@ create table `User`(
 );
 
 -- 测试
-insert into `User` values(0,'Amazing','15137422222','abcdefg','aaa.jpg');
-insert into `User` values(0,'Great','15137423333','hijklmn','bbb.jpg');
+insert into `User` values(0,'Amazing','15137423965','12345','aaa.jpg');
+insert into `User` values(0,'YESOK','15137426755','123456','bbb.jpg');
 
 select * from User;
 
@@ -26,7 +26,7 @@ create table `Message`(
 );
 
 -- 测试
-insert into `Message` values(0,3,'Amazing','bbbba.jpg','我今天很开心1231231',0,1234567891);
+insert into `Message` values(0,1,'Amazing','aaa.jpg','今天天气真不错',0,1234567891);
 
 select * from `Message`;
 
