@@ -222,7 +222,6 @@ public class DataController {
     }
 
     // 6.树洞广场
-    // 由于id经过BASE64和AES加密后，出现+，在使用GET请求时会错误地解析+，故使用POST
     @PostMapping("/getAllMessage")
     public Result getAllMessage(@RequestParam("user_id") String user_id,
                                   @RequestParam("encrypt_code") String encrypt_code) {
@@ -270,7 +269,7 @@ public class DataController {
                     return ResultUtil.success();
                 }
                 else {
-                    return ResultUtil.messageNotExist();
+                    return ResultUtil.unkonwnError();
                 }
             }
             // 不合法
