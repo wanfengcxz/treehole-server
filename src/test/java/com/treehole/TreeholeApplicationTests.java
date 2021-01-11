@@ -31,15 +31,15 @@ class TreeholeApplicationTests {
 	@Test
     void testAESUtil2(){
 
-		try {
-			String encrypt_code1_wrong = "JrcylrP8+Qb2YfkM/dVBEg==";
-			String encrypt_code2_right = "JrcylrP7+Qb2YfkM/dVBEg==";
-
-			System.out.println(AESUtil.decode(encrypt_code2_right));
-			System.out.println(AESUtil.decode(encrypt_code1_wrong));
-		}
-	    catch (BadPaddingException e){
-			e.printStackTrace();
-		}
+//		try {
+//			String encrypt_code1_wrong = "JrcylrP8+Qb2YfkM/dVBEg==";
+//			String encrypt_code2_right = "JrcylrP7+Qb2YfkM/dVBEg==";
+//
+//			System.out.println(AESUtil.decode(encrypt_code2_right));
+//			System.out.println(AESUtil.decode(encrypt_code1_wrong));
+//		}
+//	    catch (BadPaddingException e){
+//			e.printStackTrace();
+//		}
     }
 }
