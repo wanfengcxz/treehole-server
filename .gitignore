@@ -5,7 +5,7 @@ target/
 !**/src/test/**/target/
 
 ###springboot
-/src/main/resources/application.properties
+*.properties
 
 ### STS ###
 .apt_generated
