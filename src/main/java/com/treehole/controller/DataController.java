@@ -31,14 +31,14 @@ import java.util.List;
  * @date 2021.01.07
  */
 @RestController
-@RequestMapping("/json")
+//@RequestMapping("/json")
 public class DataController {
 
     @Autowired
     DataMapper dataMapper;
 
     // 1.用户注册
-    @PostMapping("/register")
+    @PostMapping("treehole/register")
     public Result register(@RequestParam("user_name") String user_name,
                            @RequestParam("phone") String phone,
                            @RequestParam("password") String password,
@@ -70,7 +70,7 @@ public class DataController {
     }
 
     // 2.用户登录
-    @PostMapping("/login")
+    @PostMapping("treehole/login")
     public Result login(@RequestParam("phone") String phone,
                         @RequestParam("password") String password){
         User find_condition = new User();
@@ -98,7 +98,7 @@ public class DataController {
     }
 
     // 3.发布树洞
-    @PostMapping("/publicMessage")
+    @PostMapping("treehole/publicMessage")
     public Result publicMessage(@RequestParam("user_id") String user_id,
                                 @RequestParam("encrypt_code") String encrypt_code,
                                 @RequestParam("content") String content,
@@ -144,7 +144,7 @@ public class DataController {
     }
 
     // 4.我的树洞
-    @PostMapping("/getMyAllMessage")
+    @PostMapping("treehole/getMyAllMessage")
     public Result getMyAllMessage(@RequestParam("user_id") String user_id,
                                   @RequestParam("encrypt_code") String encrypt_code) {
         try {
@@ -179,7 +179,7 @@ public class DataController {
     }
 
     // 5.删除树洞
-    @PostMapping("/deleteMessage")
+    @PostMapping("treehole/deleteMessage")
     public Result deleteMessage(@RequestParam("user_id") String user_id,
                                 @RequestParam("encrypt_code") String encrypt_code,
                                 @RequestParam("message_id") String message_id) {
@@ -223,7 +223,7 @@ public class DataController {
 
     // 6.树洞广场
     // 由于id经过BASE64和AES加密后，出现+，在使用GET请求时会错误地解析+，故使用POST
-    @PostMapping("/getAllMessage")
+    @PostMapping("treehole/getAllMessage")
     public Result getAllMessage(@RequestParam("user_id") String user_id,
                                   @RequestParam("encrypt_code") String encrypt_code) {
         try {
@@ -249,7 +249,7 @@ public class DataController {
     }
 
     // 7.点赞
-    @PostMapping("/like")
+    @PostMapping("treehole/like")
     public Result like(@RequestParam("user_id") String user_id,
                        @RequestParam("encrypt_code") String encrypt_code,
                        @RequestParam("message_id") String message_id
