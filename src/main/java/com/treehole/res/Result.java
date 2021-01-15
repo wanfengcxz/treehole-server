@@ -1,6 +1,12 @@
 package com.treehole.res;
 
-
+/**
+ * @author W.Q
+ * @project treehole
+ * @package com.treehole.res
+ * @date 2021.01.08
+ * @description 向前端返回数据时提供统一的格式
+ */
 public class Result<T> {
 
     private Integer code;

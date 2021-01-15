@@ -2,6 +2,13 @@ package com.treehole.service;
 
 import com.treehole.res.Result;
 
+/**
+ * @author W.Q
+ * @project treehole
+ * @package com.treehole.entity
+ * @date 2021.01.14
+ * @description 业务逻辑层 提供业务逻辑接口
+ */
 public interface TreeholeService {
 
     // 1.注册

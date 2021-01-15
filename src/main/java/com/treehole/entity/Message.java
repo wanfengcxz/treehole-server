@@ -7,6 +7,7 @@ import org.apache.ibatis.type.Alias;
  * @project treehole
  * @package com.treehole.entity
  * @date 2021.01.06
+ * @description model层 实体类
  */
 
 @Alias("message")

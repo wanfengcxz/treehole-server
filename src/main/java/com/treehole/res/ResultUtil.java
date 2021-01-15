@@ -1,5 +1,12 @@
 package com.treehole.res;
 
+/**
+ * @author W.Q
+ * @project treehole
+ * @package com.treehole.res
+ * @date 2021.01.08
+ * @description 通过枚举封装了几种预定的访问结果
+ */
 enum ResultEnum {
     //这里是可以自己定义的，方便与前端交互即可
 
@@ -36,6 +43,13 @@ enum ResultEnum {
     }
 }
 
+/**
+ * @author W.Q
+ * @project treehole
+ * @package com.treehole.res
+ * @date 2021.01.06
+ * @description 将枚举变量的信息进一步封装为方法
+ */
 public class ResultUtil {
 
     // 未知错误

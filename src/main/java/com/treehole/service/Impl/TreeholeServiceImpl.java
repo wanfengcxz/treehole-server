@@ -13,6 +13,13 @@ import org.springframework.stereotype.Service;
 import javax.crypto.BadPaddingException;
 import java.util.List;
 
+/**
+ * @author W.Q
+ * @project treehole
+ * @package com.treehole.entity
+ * @date 2021.01.14
+ * @description 业务逻辑层 实现真正的业务逻辑
+ */
 @Service
 public class TreeholeServiceImpl implements TreeholeService {
 

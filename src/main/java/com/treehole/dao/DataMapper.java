@@ -11,6 +11,7 @@ import java.util.List;
  * @project treehole
  * @package com.treehole.dao
  * @date 2021.01.06
+ * @description 持久层。数据库CRUD接口，只有方法名，封装了对数据库进行数据持久化的操作
  */
 
 @Mapper

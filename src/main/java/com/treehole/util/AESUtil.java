@@ -9,7 +9,11 @@ import java.util.Base64;
 import javax.crypto.BadPaddingException;
 
 /**
- * AES加密解密
+ * @author W.Q
+ * @project treehole
+ * @package com.treehole.entity
+ * @date 2021.01.08
+ * @description 提供数据加密操作，用于访问控制
  */
 public class AESUtil {
     private static final String default_key = "greatTreehole";
