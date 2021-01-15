@@ -1,7 +1,10 @@
 package com.treehole.controller;
 
+import com.treehole.dao.DataMapper;
 import com.treehole.res.Result;
 import com.treehole.service.Impl.TreeholeServiceImpl;
+import com.treehole.service.TreeholeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 //POST方法：
@@ -25,7 +28,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class DataController {
 
-    TreeholeServiceImpl treeholeService;
+//    @Autowired
+//    DataMapper dataMapper;
+    @Autowired
+    private TreeholeService treeholeService;
 
     // 1.用户注册
     @PostMapping("treehole/register")

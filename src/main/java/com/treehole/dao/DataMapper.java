@@ -16,7 +16,6 @@ import java.util.List;
 @Mapper
 public interface DataMapper {
 
-
     List<User> getUserByConditionIf(User user);
 
     List<Message> getMessageByConditionIf(Message message);
