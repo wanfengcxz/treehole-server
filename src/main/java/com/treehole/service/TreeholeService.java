@@ -1,14 +1,8 @@
 package com.treehole.service;
 
-import com.treehole.dao.DataMapper;
 import com.treehole.res.Result;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 public interface TreeholeService {
-
-//    @Autowired
-//    DataMapper dataMapper;
 
     // 1.注册
     public Result register(String user_name, String phone, String password, String face_url);

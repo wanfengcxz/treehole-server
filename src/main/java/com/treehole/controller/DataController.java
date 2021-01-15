@@ -1,8 +1,6 @@
 package com.treehole.controller;
 
-import com.treehole.dao.DataMapper;
 import com.treehole.res.Result;
-import com.treehole.service.Impl.TreeholeServiceImpl;
 import com.treehole.service.TreeholeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -28,8 +26,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class DataController {
 
-//    @Autowired
-//    DataMapper dataMapper;
     @Autowired
     private TreeholeService treeholeService;
 
