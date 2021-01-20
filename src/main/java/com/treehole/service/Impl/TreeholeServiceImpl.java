@@ -3,8 +3,8 @@ package com.treehole.service.Impl;
 import com.treehole.dao.DataMapper;
 import com.treehole.entity.Message;
 import com.treehole.entity.User;
-import com.treehole.res.Result;
-import com.treehole.res.ResultUtil;
+import com.treehole.util.Result;
+import com.treehole.util.ResultUtil;
 import com.treehole.service.TreeholeService;
 import com.treehole.util.AESUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,7 +48,7 @@ public class TreeholeServiceImpl implements TreeholeService {
                 return ResultUtil.success();
                 // 未知错误
             else {
-                return ResultUtil.unkonwnError();
+                return ResultUtil.unknownError();
             }
         }
     }
@@ -180,7 +180,7 @@ public class TreeholeServiceImpl implements TreeholeService {
                 }
                 // 未知错误
                 else {
-                    return ResultUtil.unkonwnError();
+                    return ResultUtil.unknownError();
                 }
             }
             // 不合法
