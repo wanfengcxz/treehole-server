@@ -1,4 +1,4 @@
-package com.treehole.res;
+package com.treehole.util;
 
 /**
  * @author W.Q
@@ -53,7 +53,7 @@ enum ResultEnum {
 public class ResultUtil {
 
     // 未知错误
-    public static Result unkonwnError(){
+    public static Result unknownError(){
         Result result = new Result();
         result.setCode(ResultEnum.UNKNOWN_ERROR.getCode());
         result.setMsg(ResultEnum.UNKNOWN_ERROR.getMsg());

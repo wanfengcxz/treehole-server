@@ -1,4 +1,4 @@
-package com.treehole.res;
+package com.treehole.util;
 
 /**
  * @author W.Q
