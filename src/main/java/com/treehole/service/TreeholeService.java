@@ -1,6 +1,6 @@
 package com.treehole.service;
 
-import com.treehole.res.Result;
+import com.treehole.util.Result;
 
 /**
  * @author W.Q

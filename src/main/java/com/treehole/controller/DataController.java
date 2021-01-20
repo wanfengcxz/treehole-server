@@ -1,6 +1,6 @@
 package com.treehole.controller;
 
-import com.treehole.res.Result;
+import com.treehole.util.Result;
 import com.treehole.service.TreeholeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
