@@ -1,45 +1,39 @@
 package com.treehole;
 
+import com.treehole.service.TreeholeService;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import com.treehole.util.AESUtil;
 
 import javax.crypto.BadPaddingException;
-import java.util.Base64;
 
 @SpringBootTest
 class TreeholeApplicationTests {
 
+	@Autowired
+	private TreeholeService treeholeService;
+
 	@Test
 	void testAESUtil() {
 		try {
-			System.out.println("test");
+			System.out.println("test AESUtil");
 			String a = "12345";
+			System.out.println("要加密的字段为"+a);
 			String s = AESUtil.encode(a);
-			System.out.println(s);
+			System.out.println("加密后："+s);
 			String s1 = AESUtil.decode(s);
-			System.out.println(s1);
-			String s2 = Base64.getEncoder().encodeToString(a.getBytes());
-			System.out.println(s2);
+			System.out.println("解密后："+s1);
 		}
 		catch (BadPaddingException e){
 			e.printStackTrace();
 		}
-
 	}
 
 	@Test
-    void testAESUtil2(){
-
-//		try {
-//			String encrypt_code1_wrong = "JrcylrP8+Qb2YfkM/dVBEg==";
-//			String encrypt_code2_right = "JrcylrP7+Qb2YfkM/dVBEg==";
-//
-//			System.out.println(AESUtil.decode(encrypt_code2_right));
-//			System.out.println(AESUtil.decode(encrypt_code1_wrong));
-//		}
-//	    catch (BadPaddingException e){
-//			e.printStackTrace();
-//		}
+    void testTreeholeService(){
+		treeholeService.register("EASY2","12345678912","123456","123.png");
     }
+
+
 }
