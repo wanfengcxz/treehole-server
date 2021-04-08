@@ -3,18 +3,18 @@
 ## 项目展示
 
 <figure class="half">    
-<img src="./img/login.jpg" width="46%" height="46%" alt="登录界面">
-<img src="./img/register.jpg" width="46%" height="46%" alt="注册界面">
+<img src="./img/login.jpg" width="40%" height="40%" alt="登录界面">
+<img src="./img/register.jpg" width="40%" height="40%" alt="注册界面">
 </figure>
 
 <figure class="half">    
-<img src="./img/square1.jpg" width="46%" height="46%" alt="树洞广场">
-<img src="./img/square2.jpg" width="46%" height="46%" alt="树洞广场">
+<img src="./img/square1.jpg" width="40%" height="40%" alt="树洞广场">
+<img src="./img/square2.jpg" width="40%" height="40%" alt="树洞广场">
 </figure>
 
 <figure class="half">    
-<img src="./img/home.jpg" width="46%" height="46%" alt="个人中心">
-<img src="./img/public.jpg" width="46%" height="46%" alt="发布树洞">
+<img src="./img/home.jpg" width="40%" height="40%" alt="个人中心">
+<img src="./img/public.jpg" width="40%" height="40%" alt="发布树洞">
 </figure>
 
 
