@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.*;
  * @description 访问控制层，负责前后端交互
  */
 @RestController
+@CrossOrigin()
 public class DataController {
 
     @Autowired
